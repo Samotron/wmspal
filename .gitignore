@@ -1,0 +1,320 @@
+# WMSPal .gitignore
+
+# Build directories and artifacts
+build/
+build-*/
+cmake-build-*/
+dist/
+bin/
+lib/
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+CTestTestfile.cmake
+install_manifest.txt
+
+# Static build dependencies
+static-build/
+deps/
+third-party/
+vendor/
+
+# Compiled object files
+*.o
+*.obj
+*.lo
+*.slo
+
+# Compiled static libraries
+*.lai
+*.la
+
+# Executables
+wmspal
+wmspal.exe
+
+# Generated documentation
+docs/html/
+docs/latex/
+docs/man/
+*.pdf
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Eclipse CDT
+.cproject
+.project
+.settings/
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+
+# Visual Studio
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.user
+.vs/
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+
+# Test outputs and downloaded WMS data
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.prj
+*.wld
+*.shp
+*.shx
+*.dbf
+*.vec
+test_downloads/
+downloads/
+output/
+
+# Package manager artifacts
+vcpkg_installed/
+conan/
+.conan/
+
+# Debug and profiling
+*.dSYM/
+*.su
+*.idb
+*.pdb
+core
+vgcore.*
+*.gcda
+*.gcno
+*.gcov
+
+# Memory leak detection
+valgrind-*.log
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Compressed archives
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.zip
+*.7z
+*.rar
+
+# Environment and configuration
+.env
+.env.local
+config.local
+settings.local
+
+# Packaging
+*.deb
+*.rpm
+*.pkg
+*.dmg
+*.msi
+
+# Documentation builds
+Doxyfile.bak
+doxygen_warnings.log
+
+# Coverage reports
+coverage/
+*.info
+lcov.info
+
+# Static analysis
+cppcheck-*.xml
+scan-build-*/
+
+# Dependency lock files (if using package managers)
+Pipfile.lock
+poetry.lock
+package-lock.json
+
+# Custom patterns for WMSPal
+# Add any project-specific patterns here
+wms_cache/
+tiles/
+georef_temp/
+
+# Additional build artifacts
+*.map
+*.pch
+*.gch
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.manifest
+*.tlog
+*.lastbuildstate
+*.iobj
+*.ipdb
+
+# Additional temporary files
+*.autosave
+*.orig
+*.rej
+*_backup
+*_old
+.#*
+\#*#
+
+# Additional IDE files
+.fleet/
+.atom/
+*.sublime-*
+*.code-workspace
+
+# Node.js (in case of any JS tooling)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# Python (for any scripts or tools)
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.coverage
+.tox/
+venv/
+env/
+
+# Docker
+.dockerignore
+Dockerfile.*
+docker-compose.override.yml
+
+# Security and secrets
+*.key
+*.pem
+*.crt
+*.cert
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# Performance profiling
+perf.data*
+gmon.out
+callgrind.out.*
+cachegrind.out.*
+
+# Additional image formats
+*.bmp
+*.gif
+*.webp
+*.svg
+*.ico
+
+# Audio/video files that might be test data
+*.mp3
+*.mp4
+*.avi
+*.mov
+*.wav
+
+# Large data files
+*.csv
+*.json
+*.xml
+*.dat
+*.bin
+
+# Backup files from editors
+*~
+.#*
+\#*\#
+.*.swp
+.*.swo
+*.bak
+*.orig
+
+# Crash dumps
+*.dmp
+*.mdmp
+core.*
+crash*
+
+# Sanitizer outputs
+*.san
+*_sanitizer_*
+
+# Fuzzing outputs
+fuzz-*
+crash-*
+leak-*
+timeout-*
+
+# Additional CMake
+CMakeUserPresets.json
+.cmake/
+
+# JetBrains IDEs
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+
+# Additional coverage tools
+*.profdata
+*.profraw
+
+# Generated protocol buffers or similar
+*.pb.h
+*.pb.cc
+*_pb2.py
+
+# Additional logging
+*.log.*
+logs/
+
+*.geojson

@@ -1,0 +1,10 @@
+{
+  "name": "wmspal",
+  "version": "1.0.0",
+  "description": "A C-based CLI app for working with WMS services",
+  "dependencies": [
+    "curl",
+    "geos",
+    "proj4"
+  ]
+}
