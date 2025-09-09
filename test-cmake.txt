@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.20)
+project(test C)
+
+# Find required packages using vcpkg
+find_package(CURL REQUIRED)
+message(STATUS "CURL found: ${CURL_FOUND}")
+
+find_package(geos CONFIG QUIET)
+message(STATUS "geos found: ${geos_FOUND}")
+
+find_package(proj CONFIG QUIET)
+message(STATUS "proj found: ${proj_FOUND}")
+
+if(geos_FOUND)
+    message(STATUS "GEOS targets available")
+endif()
+
+if(proj_FOUND)
+    message(STATUS "PROJ targets available")
+endif()

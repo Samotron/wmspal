@@ -41,6 +41,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: Install system dependencies (macOS)
+      if: matrix.os == 'macos-latest'
+      run: |
+        # Install any missing system dependencies for macOS
+        brew install pkg-config || true
+
     - name: Setup vcpkg
       uses: lukka/run-vcpkg@v11
       with:
