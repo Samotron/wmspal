@@ -5,6 +5,6 @@
   "dependencies": [
     "curl",
     "geos",
-    "proj4"
+    "proj"
   ]
 }
