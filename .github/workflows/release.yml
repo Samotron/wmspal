@@ -44,7 +44,7 @@ jobs:
     - name: Setup vcpkg
       uses: lukka/run-vcpkg@v11
       with:
-        vcpkgGitCommitId: '2024.07.12'
+        vcpkgGitCommitId: '1de2026f28ead93ff1773e6e680387643e914ea1'
 
     - name: Setup CMake and Ninja
       uses: lukka/get-cmake@latest
