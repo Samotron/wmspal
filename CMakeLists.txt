@@ -17,8 +17,8 @@ endif()
 
 # Find required packages using vcpkg
 find_package(CURL REQUIRED)
-find_package(geos QUIET)
-find_package(proj4 QUIET)
+find_package(geos CONFIG QUIET)
+find_package(proj CONFIG QUIET)
 
 include_directories(include)
 
@@ -37,13 +37,13 @@ target_link_libraries(wmspal CURL::libcurl)
 
 # Link GEOS and PROJ if available
 if(geos_FOUND)
-    target_link_libraries(wmspal geos::geos)
+    target_link_libraries(wmspal GEOS::geos)
     target_compile_definitions(wmspal PRIVATE HAVE_GEOS)
     message(STATUS "Building with GEOS support")
 endif()
 
-if(proj4_FOUND)
-    target_link_libraries(wmspal proj4::proj4)
+if(proj_FOUND)
+    target_link_libraries(wmspal PROJ::proj)
     target_compile_definitions(wmspal PRIVATE HAVE_PROJ)
     message(STATUS "Building with PROJ support")
 endif()
