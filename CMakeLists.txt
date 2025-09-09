@@ -22,6 +22,19 @@ find_package(CURL REQUIRED)
 find_package(geos CONFIG QUIET)
 find_package(proj CONFIG QUIET)
 
+# Check if we're building with optional features
+if(TARGET GEOS::geos)
+    message(STATUS "GEOS found - building with enhanced geometry support")
+else()
+    message(STATUS "GEOS not found - building without enhanced geometry support")
+endif()
+
+if(TARGET PROJ::proj)
+    message(STATUS "PROJ found - building with coordinate transformation support")
+else()
+    message(STATUS "PROJ not found - building without coordinate transformation support")
+endif()
+
 include_directories(include)
 
 set(SOURCES
